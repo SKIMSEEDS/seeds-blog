@@ -19,6 +19,10 @@ class Post(models.Model):
         return self.title
 
 class Category(models.Model):
+<<<<<<< HEAD
+=======
+    author = models.ForeignKey('auth.User')
+>>>>>>> 85f91a68d6c789512d0bf87b3faa32b5419abaca
     title = models.CharField(max_length=200)
     created_date = models.DateTimeField(
             default=timezone.now)
@@ -30,4 +34,8 @@ class Category(models.Model):
         self.save()
 
     def __str__(self):
+<<<<<<< HEAD
         return self.title
+=======
+        return self.title
+>>>>>>> 85f91a68d6c789512d0bf87b3faa32b5419abaca

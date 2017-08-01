@@ -20,12 +20,20 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+<<<<<<< HEAD
 SECRET_KEY = '+84=yb5w9)%$^21c1xq5_mi+=96!&4rmmqkb&50!s6_-_b6g$s'
+=======
+SECRET_KEY = 'o7av2!9sg(*71egjyt#7^06xp!8=_hhxvpv$yxw2tggj40vwv8'
+>>>>>>> 85f91a68d6c789512d0bf87b3faa32b5419abaca
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+<<<<<<< HEAD
 ALLOWED_HOSTS = ['karina306', '127.0.0.1', 'skimseeds.pythonanywhere.com', 'https://github.com/SKIMSEEDS/seeds-blog.git']
+=======
+ALLOWED_HOSTS = ['127.0.0.1', '<your_username>.pythonanywhere.com']
+>>>>>>> 85f91a68d6c789512d0bf87b3faa32b5419abaca
 
 
 # Application definition
