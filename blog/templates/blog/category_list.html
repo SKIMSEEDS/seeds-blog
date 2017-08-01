@@ -1,18 +1,14 @@
-<html>
-    <head>
-        <title>SEEDS blog</title>
-    </head>
-    <body>
-        <div class="page-header">
-            <h1><a href="/">SEEDS Blog</a></h1>
-        </div>
+{% extends 'blog/base.html' %}
 
-        {% for category in categories %}
-            <div class="category">
+{% block content %}
+    {% for category in categories %}
+        <div class="category">
+            <div class="date">
                 <p>published: {{ category.published_date }}</p>
-                <h1><a href="">{{ category.title }}</a></h1>
-                <p>{{ category.text|linebreaksbr }}</p>
             </div>
-        {% endfor %}
-    </body>
-</html>
+            <h1><a href="{% url 'category_detail' pk=category.pk %}">{{ category.title }}</a></h1>
+            <p>{{ category.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
+        
