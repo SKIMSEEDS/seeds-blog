@@ -25,7 +25,7 @@ SECRET_KEY = '+84=yb5w9)%$^21c1xq5_mi+=96!&4rmmqkb&50!s6_-_b6g$s'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'SKIMSEEDS.pythonanywhere.com']
+ALLOWED_HOSTS = ['karina306', '127.0.0.1', 'skimseeds.pythonanywhere.com', 'https://github.com/SKIMSEEDS/seeds-blog.git']
 
 
 # Application definition
