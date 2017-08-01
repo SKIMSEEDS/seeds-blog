@@ -1,9 +1,18 @@
 <html>
     <head>
-        <title>Ola's blog</title>
+        <title>SEEDS blog</title>
     </head>
     <body>
-        <p>Hi there!</p>
-        <p>It works!</p>
+        <div>
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+
+        {% for category in categories %}
+            <div>
+                <p>published: {{ category.published_date }}</p>
+                <h1><a href="">{{ category.title }}</a></h1>
+                <p>{{ category.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
