@@ -3,12 +3,12 @@
         <title>SEEDS blog</title>
     </head>
     <body>
-        <div>
-            <h1><a href="/">Django Girls Blog</a></h1>
+        <div class="page-header">
+            <h1><a href="/">SEEDS Blog</a></h1>
         </div>
 
         {% for category in categories %}
-            <div>
+            <div class="category">
                 <p>published: {{ category.published_date }}</p>
                 <h1><a href="">{{ category.title }}</a></h1>
                 <p>{{ category.text|linebreaksbr }}</p>
