@@ -115,6 +115,11 @@ h4 {
     /*text-align: center;*/
 }
 
+.logo{
+    background-image: url("SeedsLogoS.png");
+    width: 10%;
+    height: 14%;
+}
 .container {
     position: relative;
 }

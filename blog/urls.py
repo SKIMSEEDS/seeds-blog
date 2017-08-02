@@ -3,6 +3,7 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
+	url(r'^home/$', views.SeedsHomePageView.as_view(), name="Seeds_home"),
     url(r'^$', views.post_list, name='post_list'),
     url(r'^$', views.category_list, name='category_list'),
     url(r'^post/(?P<pk>\d+)/$', views.post_detail, name='post_detail'),
@@ -15,7 +16,7 @@ urlpatterns = [
     url(r'^polhome/$', views.PolHomePageView.as_view(), name="polhome"),
     url(r'^envihome/$', views.EnviHomePageView.as_view(), name="envihome"),
     url(r'^socihome/$', views.SociHomePageView.as_view(), name="socihome"),
-    url(r'^home/$', views.SeedsHomePageView.as_view(), name="Seeds_home"),
+    
     url(r'^governmen/$', views.GovernmentPageView.as_view(), name='government'),
 	url(r'^activism/$', views.ActivismPageView.as_view(), name='activism'),	
 	url(r'^rights/$', views.RightsPageView.as_view(), name='rights'),

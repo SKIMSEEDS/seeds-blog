@@ -9,9 +9,7 @@
         <img href="//Social_Button_BG.png">
         <img href="//Political_Button_BG.png">
         <img href="//Enviornmental_Button_BG.png">
-        <img href="//Current_Event_1.png" rel="1">
-        <img href="//Current_Event_2.png" rel="2">
-        <img href="//Seeds_Logo.png" rel="logo">
+        <img href="//SeedsLogo.png">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
         
@@ -36,32 +34,6 @@
         <br>
         <br>
         <br>
-        <br>
-        <div class="w3-content w3-display-container">
-          <!--<img class="mySlides" scrc="//Current_Event_1" style="width:100%">
-          <img class="mySlides" src="//Current_Event_2" style="width:100%">-->
-        </div>
-
-        <script>
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 5000); // Change image every 2 seconds
-        }
-        </script>
-        <br>
-        <br>
-        <br>
-        <br>
         <div class = "pol">
             <h2 style="font-size:50px"><a href="{% url 'polhome' %}">Political</a></h2>
         </div>
@@ -79,12 +51,14 @@
         <br>
         <br>
         <div class="bottom">
-            <p><a href="{% url 'about_us' %}">About Us</a></p>
+            <p style="color: white; text-decoration: none"><a href="{% url 'about_us' %}">About Us</a></p>
             <br>
-            <p><a href="{% url 'contact_us' %}">Contact Us</a></p>
+            <p style="color: white; text-decoration: none"><a href="{% url 'contact_us' %}">Contact Us</a></p>
             <br>
-            <p><a href="{% url 'meet_the_team' %}">Meet The Team</a></p>
-            <img src="SeedsLogo.png" width="10" height="11">
+            <p style="color: white; text-decoration: none"><a href="{% url 'meet_the_team' %}">Meet The Team</a></p>
+                <div class="logo">
+                    
+                </div>
             <p>2017</p>
         </div>
 
