@@ -1,15 +1,26 @@
 {% load staticfiles %}
 <html>
     <head>
-        <title>SEEDS blog</title>
+        <title>SEEDS</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-        <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Lato|Questrial" rel="stylesheet">
+        <img href="//Social_Button_BG.png">
+        <img href="//Political_Button_BG.png">
+        <img href="//Enviornmental_Button_BG.png">
+        <img href="//Current_Event_1.png" rel="1">
+        <img href="//Current_Event_2.png" rel="2">
+        <img href="//Seeds_Logo.png" rel="logo">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        
     </head>
     <body>
-        <body>
-    <div class="page-header">
+        <br>
+        <br>
+        <br>
+        <br>
         <div class="page-header">
             {% if user.is_authenticated %}
                 <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
@@ -17,16 +28,65 @@
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-            <h1><a href="/">SEEDS Blog</a></h1>
+            <h1 style="margin-left: 30px"><a href="/">SEEDS</a></h1>
+        <h5 style="margin-left:-400px">Safety. Expression. Empowerment. Diversity. Speech.</h5>
+            
         </div>
-    <div class="content container">
-        <div class="row">
-            <div class="col-md-8">
-            {% block content %}
-            {% endblock %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="w3-content w3-display-container">
+          <!--<img class="mySlides" scrc="//Current_Event_1" style="width:100%">
+          <img class="mySlides" src="//Current_Event_2" style="width:100%">-->
+        </div>
+
+        <script>
+        var myIndex = 0;
+        carousel();
+
+        function carousel() {
+            var i;
+            var x = document.getElementsByClassName("mySlides");
+            for (i = 0; i < x.length; i++) {
+               x[i].style.display = "none";  
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}    
+            x[myIndex-1].style.display = "block";  
+            setTimeout(carousel, 5000); // Change image every 2 seconds
+        }
+        </script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class = "pol">
+            <h2><a href="{% url 'polhome' %}">Political</a></h2>
+        </div>
+        <br>
+        <br>
+        <div class="soc">
+          <h3><a href="{% url 'socihome' %}">Social</a></h3>
+        </div>
+        <br>
+        <br>
+        <div class="env">
+            <h4><a href="{% url 'envihome' %}">Environmental</a></h4>
+        </div>
+        <br>
+        <br>
+        <br>
+       
+
+        <div class="content container">
+            <div class="row">
+                <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+                </div>
             </div>
-        </div>
-    </div>
-</body>
-</body>
+        </div>-->
+    </body>
 </html>

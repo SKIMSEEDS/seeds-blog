@@ -4,6 +4,7 @@ from .models import Post, Category
 from .forms import PostForm
 from django.shortcuts import redirect
 from django.contrib.auth.decorators import login_required
+from django.views.generic import TemplateView
 
 
 def category_list(request):
@@ -20,7 +21,7 @@ def post_detail(request, pk):
 
 def category_detail(request, pk):
     category = get_object_or_404(Category, pk=pk)
-    return render(request, 'blog/post_detail.html', {'category': category})
+    return render(request, 'blog/category_detail.html', {'category': category})
 @login_required
 def post_new(request):
     if request.method == "POST":
@@ -60,6 +61,49 @@ def post_remove(request, pk):
     post = get_object_or_404(Post, pk=pk)
     post.delete()
     return redirect('post_list')
+
+class PolHomePageView(TemplateView):
+    template_name = "blog/politicalhome.html"
+
+class SociHomePageView(TemplateView):
+    template_name = "blog/socialhomepage.html"
+
+class EnviHomePageView(TemplateView):
+    template_name = "blog/environmentalhome.html"
+
+
+class SeedsHomePageView(TemplateView):
+    template_name = "blog/base.html"
+
+class GlobalWarmingPageView(TemplateView):
+     template_name = "blog/envisubtopic1.html"
+
+class AnimalRightsPageView(TemplateView):
+     template_name = "blog/envisubtopic2.html"
+
+class OtherPageView(TemplateView):
+     template_name = "blog/envisubtopic3.html"
+
+
+class GovernmentPageView(TemplateView):
+     template_name = "blog/polisubtopic1.html"
+
+class ActivismPageView(TemplateView):
+     template_name = "blog/polisubtopic2.html"
+
+class RightsPageView(TemplateView):
+     template_name = "blog/polisubtopic3.html"
+
+
+class LGBTQPageView(TemplateView):
+     template_name = "blog/socisubtopic1.html"
+
+class HealthPageView(TemplateView):
+     template_name = "blog/socisubtopic2.html"
+
+class SociOtherPageView(TemplateView):
+     template_name = "blog/socisubtopic3.html"
+
 
 
     
