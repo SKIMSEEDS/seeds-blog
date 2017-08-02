@@ -78,18 +78,28 @@ a:active {
 </head>
 <body>
 
-<header>
-<h1><a href="{% url 'Seeds_home' %}">SEEDS</a></h1>
-<h2>Government</h2>
-</header>
+	<header>
+	<h1 style="font-color:white"><a href="{% url 'Seeds_home' %}">SEEDS</a></h1>
+	<h2>Government</h2>
+	</header>
 
 
-<div id="content-container">
-	<div id="subtopic1">
-	<p> POSTS WILL GO HERE?</p>
-	</p></div>
-	<p></p>
-	<p></p>
-</div>
+	<div id="content-container">
+		<div id="subtopic1">
+			<div class="content container">
+			    <div class="row">
+			        <div class="col-md-8">
+			        <p> 
+			        	{% block content %}
+			        	{% endblock %}
+			        </p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+	
+
 
 </html>

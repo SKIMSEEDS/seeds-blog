@@ -25,5 +25,8 @@ urlpatterns = [
 	url(r'^LGBTQ/$', views.LGBTQPageView.as_view(), name='LGBTQ+'),
 	url(r'^Health/$', views.HealthPageView.as_view(), name='Health'),
 	url(r'^sociother/$', views.SociOtherPageView.as_view(), name='sociother'),
+	url(r'^about_us/$', views.AboutUsPageView.as_view(), name='about_us'),
+	url(r'^contact_us/$', views.ContactUsPageView.as_view(), name='contact_us'),
+	url(r'^meet_the_team/$', views.MeetTheTeamPageView.as_view(), name='meet_the_team'),
 
 ]

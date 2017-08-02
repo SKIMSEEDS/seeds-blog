@@ -104,6 +104,16 @@ class HealthPageView(TemplateView):
 class SociOtherPageView(TemplateView):
      template_name = "blog/socisubtopic3.html"
 
+class AboutUsPageView(TemplateView):
+     template_name = "blog/about.html"
+
+class ContactUsPageView(TemplateView):
+     template_name = "blog/contactus.html"
+
+class MeetTheTeamPageView(TemplateView):
+     template_name = "blog/meettheteam.html"
+
+
 
 
     

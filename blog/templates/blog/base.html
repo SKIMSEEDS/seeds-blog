@@ -28,8 +28,8 @@
             {% else %}
                 <a href="{% url 'login' %}" class="top-menu"><span class="glyphicon glyphicon-lock"></span></a>
             {% endif %}
-            <h1 style="margin-left: 30px"><a href="/">SEEDS</a></h1>
-        <h5 style="margin-left:-400px">Safety. Expression. Empowerment. Diversity. Speech.</h5>
+            <h1 style="margin-left: 10px; font-size: 100pt"><a href="/">SEEDS</a></h1>
+        <h5 style="margin-left:-350px; font-size: 30pt";>Speech. Expression. Empowerment. Diversity. Safety.</h5>
             
         </div>
         <br>
@@ -63,30 +63,31 @@
         <br>
         <br>
         <div class = "pol">
-            <h2><a href="{% url 'polhome' %}">Political</a></h2>
+            <h2 style="font-size:50px"><a href="{% url 'polhome' %}">Political</a></h2>
         </div>
         <br>
         <br>
         <div class="soc">
-          <h3><a href="{% url 'socihome' %}">Social</a></h3>
+          <h3 style="font-size:50px"><a href="{% url 'socihome' %}">Social</a></h3>
         </div>
         <br>
         <br>
         <div class="env">
-            <h4><a href="{% url 'envihome' %}">Environmental</a></h4>
+            <h4 style="font-size:50px"><a href="{% url 'envihome' %}">Environmental</a></h4>
         </div>
         <br>
         <br>
         <br>
-       
+        <div class="bottom">
+            <p><a href="{% url 'about_us' %}">About Us</a></p>
+            <br>
+            <p><a href="{% url 'contact_us' %}">Contact Us</a></p>
+            <br>
+            <p><a href="{% url 'meet_the_team' %}">Meet The Team</a></p>
+            <img src="SeedsLogo.png" width="10" height="11">
+            <p>2017</p>
+        </div>
 
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
-                </div>
-            </div>
-        </div>-->
+
     </body>
 </html>
